@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".ui.LoadFragment">
+
+  <data>
+
+    <variable
+        name="view"
+        type="com.micabytes.storybytes.ui.LoadFragment"/>
+
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@null"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/px_micabytes_logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageButton
+        android:id="@+id/button_story"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="@null"
+        android:onClick="@{() -> view.play()}"
+        android:contentDescription="@string/title_txt_start"
+        android:src="@drawable/ic_play_story"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/text_title"
+        android:textSize="32sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/load_txt_select"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/button_story"/>
+
+    <TextView
+        android:id="@+id/text_synopsis"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/load_txt_findjson"
+        app:layout_constraintRight_toLeftOf="@id/button_story"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintLeft_toLeftOf="parent"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fileNavigator"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:adapter="@{view.fileAdapter}"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/image_logo"
+        app:layout_constraintBottom_toTopOf="@id/text_title"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  tools:context=".ui.TitleFragment">
+
+  <data>
+
+    <variable
+      name="view"
+      type="com.micabytes.storybytes.ui.TitleFragment" />
+
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+      android:id="@+id/image_logo"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:contentDescription="@null"
+      android:layout_marginTop="24dp"
+      android:src="@drawable/px_micabytes_logo"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+      android:id="@+id/image_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:scaleType="fitXY"
+      android:src="@drawable/px_storybytes_logo"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintLeft_toLeftOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      android:contentDescription="@null" />
+
+    <TextView
+      android:id="@+id/text_Version"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintRight_toRightOf="parent"
+      android:textColor="#1976D2" />
+
+    <ImageButton
+      android:id="@+id/button_info"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@null"
+      android:contentDescription="@string/title_txt_info"
+      android:onClick="@{() -> view.info()}"
+      app:layout_constraintBottom_toTopOf="@id/text_Version"
+      app:layout_constraintLeft_toLeftOf="parent"
+      android:src="@drawable/ic_info" />
+
+    <ImageButton
+      android:id="@+id/button_start"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="@null"
+      android:onClick="@{() -> view.start()}"
+      android:contentDescription="@string/title_txt_start"
+      app:layout_constraintBottom_toTopOf="@id/text_Version"
+      app:layout_constraintRight_toRightOf="parent"
+      android:src="@drawable/ic_play_story" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
