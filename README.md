@@ -18,6 +18,11 @@ The original StoryBytes application was built mostly to experiment with code; th
 
 At the moment, there are no plans to work further on this, but if you have ideas for improvements or additions, feel free to contribute by sending in a pull request or opening a ticket.
 
+Things that would be nice to add:
+
+* Built-in support for inky tags such as # IMAGE, # CLEAR, and #RESTART. I almost have this built in already (use commands that do this in P&T2), so this should be easy to add in.
+* Settings for different visual stylings (e.g., a Dark theme, etc.)
+
 ## Building
 
 The easiest way to build this, is to import the project into Android Studio, and then using "Run > Run App" to build and run the Android application.

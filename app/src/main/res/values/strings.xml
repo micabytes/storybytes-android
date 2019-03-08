@@ -10,16 +10,18 @@
   <string name="info_txt_twitter">Twitter Account</string>
   <string name="info_txt_discord">Discord</string>
   <string name="info_txt_support_title">Support</string>
-  <string name="info_txt_support_main">StoryBytes is provided as-is under the MIT License. If you encounter any issues with the app, please feel free to contact us on support@micabytes.com, Facebook (https://facebook.com/MicaBytes) or Twitter (https://twitter.com/MicaBytes).</string>
+  <string name="info_txt_support_main">StoryBytes is provided as-is under the MIT License. If you encounter any issues with the app, please feel free to contact us on support@micabytes.com or (preferably) on the MicaBytes discord server.</string>
+  <string name="info_txt_usage_title">Usage</string>
+  <string name="info_txt_usage_main">\"StoryBytes\" is designed and developed by Michael Akinde of MicaBytes.</string>
   <string name="info_txt_credits_title">Credits</string>
   <string name="info_txt_credits_main">\"StoryBytes\" is designed and developed by Michael Akinde of MicaBytes.</string>
-  <string name="info_txt_credits_ink">\"StoryBytes\" runs on Ink! Ink is a scripting language for writing interactive narrative, developed by inkle studios (http://inklestudios.com/ink).</string>
+  <string name="info_txt_credits_ink">\"StoryBytes\" runs on Ink! Ink is a scripting language for writing interactive narrative, developed by inkle studios (http://inklestudios.com/ink).\nInk is implemented in \"StoryBytes\" using blade-ink (https://github.com/bladecoder/blade-ink).</string>
   <string name="support_email">support@micabytes.com</string>
   <string name="support_email_type">text/plain</string>
   <string name="support_subject">StoryBytes Support</string>
   <string name="support_report">Select E-mail clients</string>
-  <string name="info_uri_facebook">http://www.facebook.com/MicaByteGames</string>
-  <string name="info_uri_twitter">http://www.twitter.com/MicaByteGames</string>
+  <string name="info_uri_facebook">http://www.facebook.com/MicaBytes</string>
+  <string name="info_uri_twitter">http://www.twitter.com/MicaBytes</string>
   <!-- Game Menu -->
   <string name="menu_txt_title">Game Menu</string>
   <string name="menu_txt_help">Help</string>
@@ -47,7 +49,7 @@
   <!-- TODO: Remove or change this placeholder text -->
   <string name="hello_blank_fragment">Hello blank fragment</string>
   <string name="load_txt_select">Select a json file</string>
-  <string name="load_txt_findjson">Copy your own ink.json files into the StoryBytes directory to run them using the text player.</string>
+  <string name="load_txt_find_json">Copy your own ink.json files into the StoryBytes directory to run them using the text player.</string>
   <string name="load_txt_pressplay">Press the play button to start the ink file.</string>
 
 </resources>

@@ -63,7 +63,7 @@ class LoadFragment : Fragment() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
       val inflater = LayoutInflater.from(parent.context)
-      return ViewHolder(inflater.inflate(R.layout.entry_file_navigation, parent, false))
+      return ViewHolder(inflater.inflate(R.layout.list_file_nav, parent, false))
     }
 
     override fun getItemCount(): Int = (items.size + 1)
@@ -97,7 +97,7 @@ class LoadFragment : Fragment() {
         currentFile = it
         if (it.isDirectory) {
           binding.textTitle.text = activity?.getText(R.string.load_txt_select)
-          binding.textSynopsis.text = activity?.getText(R.string.load_txt_findjson)
+          binding.textSynopsis.text = activity?.getText(R.string.load_txt_find_json)
           refresh()
         } else {
           binding.textTitle.text = it.name

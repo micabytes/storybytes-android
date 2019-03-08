@@ -51,7 +51,7 @@
         android:id="@+id/text_synopsis"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="@string/load_txt_findjson"
+        android:text="@string/load_txt_find_json"
         app:layout_constraintRight_toLeftOf="@id/button_story"
         app:layout_constraintTop_toBottomOf="@id/text_title"
         app:layout_constraintLeft_toLeftOf="parent"/>
