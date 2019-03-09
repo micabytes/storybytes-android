@@ -46,17 +46,24 @@ class LoadFragment : Fragment() {
         Game.story = StoryWrapper(it)
         findNavController().navigate(R.id.action_loadFragment_to_storyFragment)
       } ?: run {
-        Toast.makeText(context, context?.getString(R.string.load_txt_nofile), Toast.LENGTH_LONG).show()
+        Toast.makeText(context, context?.getString(R.string.load_txt_nofile), Toast.LENGTH_LONG)
+          .show()
       }
     } catch (e: Exception) {
-      Toast.makeText(context, context?.getString(R.string.load_txt_failed, currentFile?.name ?: ""), Toast.LENGTH_LONG).show()
+      Toast.makeText(
+        context,
+        context?.getString(R.string.load_txt_failed, currentFile?.name ?: ""),
+        Toast.LENGTH_LONG
+      ).show()
     }
   }
 
   fun refresh() {
     currentFile?.let {
       items.clear()
-      items.addAll(it.listFiles())
+      it.listFiles()?.let { files ->
+        items.addAll(files)
+      }
       fileAdapter.notifyDataSetChanged()
     }
   }
