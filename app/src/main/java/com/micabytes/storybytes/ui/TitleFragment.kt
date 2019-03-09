@@ -23,10 +23,10 @@ class TitleFragment : Fragment() {
     super.onCreate(savedInstanceState)
     version = try {
       val pInfo = activity?.packageManager?.getPackageInfo(activity?.packageName, 0)
-      pInfo?.versionName ?: getString(R.string.default_error)
+      pInfo?.versionName ?: ""
     } catch (e: PackageManager.NameNotFoundException) {
       logX(e)
-      getString(R.string.default_error)
+      ""
     }
   }
 

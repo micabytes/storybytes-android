@@ -3,6 +3,7 @@ package com.micabytes.storybytes
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.os.Environment
+import android.widget.Toast
 import com.bladecoder.ink.runtime.Story
 import com.micabytes.storybytes.util.logX
 import com.micabytes.storybytes.util.logD
@@ -27,7 +28,7 @@ class StoryWrapper(fileName: File) {
       next() // Progress the story to its first choice.
     } catch (e: Exception) {
       logX(e)
-      throw e // Throwing, in preference to failing silently.
+      throw e
     }
   }
 

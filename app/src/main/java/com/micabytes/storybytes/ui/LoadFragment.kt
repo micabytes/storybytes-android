@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
@@ -15,6 +16,7 @@ import com.micabytes.storybytes.R
 import com.micabytes.storybytes.StoryWrapper
 import com.micabytes.storybytes.databinding.FragmentLoadBinding
 import java.io.File
+import java.lang.Exception
 
 private const val SLASH = '/'
 
@@ -39,11 +41,15 @@ class LoadFragment : Fragment() {
   }
 
   fun play() {
-    currentFile?.let {
-      Game.story = StoryWrapper(it)
-      findNavController().navigate(R.id.action_loadFragment_to_storyFragment)
-    } ?: run {
-      // TODO: Message
+    try {
+      currentFile?.let {
+        Game.story = StoryWrapper(it)
+        findNavController().navigate(R.id.action_loadFragment_to_storyFragment)
+      } ?: run {
+        Toast.makeText(context, context?.getString(R.string.load_txt_nofile), Toast.LENGTH_LONG).show()
+      }
+    } catch (e: Exception) {
+      Toast.makeText(context, context?.getString(R.string.load_txt_failed, currentFile?.name ?: ""), Toast.LENGTH_LONG).show()
     }
   }
 

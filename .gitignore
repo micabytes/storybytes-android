@@ -36,3 +36,6 @@ app/build/
 app/release/
 
 gradle/
+
+# Google Play files, etc.
+promo/
