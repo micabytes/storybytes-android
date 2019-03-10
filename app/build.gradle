@@ -8,8 +8,8 @@ android {
     applicationId "com.micabytes.storybytes"
     minSdkVersion 16
     targetSdkVersion 28
-    versionCode 4
-    versionName "0.004"
+    versionCode 5
+    versionName "0.005"
     vectorDrawables.useSupportLibrary = true
   }
   dataBinding {

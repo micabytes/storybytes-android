@@ -21,6 +21,7 @@ class GameViewActivity : AppCompatActivity() {
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContentView(R.layout.activity_game)
+    generateFolder()
     copyAssets()
   }
 
@@ -95,9 +96,9 @@ class GameViewActivity : AppCompatActivity() {
 
   private fun copyAssets() {
     val assetManager = assets
-    var files: Array<String>? = null
+    var files: List<String>? = null
     try {
-      files = assetManager.list("")
+      files = assetManager.list("")?.toList()?.filter { it.endsWith(".json") }
     } catch (e: IOException) {
       logX(e)
     }
